@@ -17,12 +17,12 @@ Changes
 MANIFEST
 META.yml
 make-dist.sh
+t/23_flickr.t
+t/22_yahoo.t
 t/21_index-e.t
 t/20_index-j.t
 t/09_broken.t
 t/07_getelem.t
-t/23_flickr.t
-t/22_yahoo.t
 t/06_japanese.t
 t/10_escape.t
 t/08_nest.t

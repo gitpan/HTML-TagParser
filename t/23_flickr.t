@@ -30,14 +30,14 @@ sub test_main {
     my $top = $html->getElementsByName('top');
     is( $top->tagName(), 'a', 'a name top' );
 
-    my $input = $html->getElementById('search_input');
-    is( $input->tagName(), 'input', 'input id search_input' );
+    my $input = $html->getElementById('header_search_q');
+    is( $input->tagName(), 'input', 'input id header_search_q' );
 
     my $show = $html->getElementsByAttribute('href','/photos/u-suke/show/');
-    like( $show->innerText(), qr/Yusuke/i, 'a href Yusuke' );
+    like( $show->innerText(), qr/View as slideshow/i, 'a href /View as slideshow/' );
 
-    my $topnavi = $html->getElementsByClassName('topnavi');
-    like( $topnavi->innerText(), qr/Photos:/i, 'class topnavi' );
+    my $topnavi = $html->getElementsByClassName('About');
+    like( $topnavi->innerText(), qr/Copyright/i, 'class About /Copyright/' );
 
     my @privacy = $html->getElementsByClassName('Privacy');
     ok( scalar @privacy, 'class Privacy' );

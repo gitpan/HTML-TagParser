@@ -48,7 +48,7 @@ and have <p> elements which are not closed.
 
 =head2 $html = HTML::TagParser->new();
 
-This method constructs a empty instance of the "HTML::TagParser" class.
+This method constructs an empty instance of the C<HTML::TagParser> class.
 
 =head2 $html = HTML::TagParser->new( $url );
 
@@ -67,16 +67,16 @@ this method parses a local HTML file and returns its instance
 If new() is called with a string of HTML source code,
 this method parses it and returns its instance.
 
-=head2 $html = HTML::TagParser->fetch( $url, %param );
+=head2 $html->fetch( $url, %param );
 
 This method fetches a HTML file from remote web server and parse it.
 The second argument is optional parameters for L<URI::Fetch> module.
 
-=head2 $html = HTML::TagParser->open( $file );
+=head2 $html->open( $file );
 
 This method parses a local HTML file.
 
-=head2 $html = HTML::TagParser->parse( $source );
+=head2 $html->parse( $source );
 
 This method parses a string of HTML source code.
 
@@ -128,8 +128,8 @@ This method returns the value of $elem's attributes which name is $key.
 
 =head1 INTERNATIONALIZATION
 
-This module natively understands a character set of document 
-by reading its meta element.
+This module natively understands the character encoding used in document 
+by parsing its meta element.
 
     <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
 
@@ -155,7 +155,7 @@ use Symbol;
 use Carp;
 
 use vars qw( $VERSION );
-$VERSION = "0.13";
+$VERSION = "0.14";
 
 my $J2E        = {qw( jis ISO-2022-JP sjis Shift_JIS euc EUC-JP ucs2 UCS2 )};
 my $E2J        = { map { lc($_) } reverse %$J2E };
@@ -429,7 +429,8 @@ sub encode_from_to {
     return $to if ( uc($from) eq uc($to) );
     &load_encode() if ( $] > 5.008 );
     if ( defined $Encode::VERSION ) {
-        Encode::from_to( $$txtref, $from, $to, Encode::FB_XMLCREF() );
+        # 2006/11/01 FB_XMLCREF -> XMLCREF see [Jcode5 802]
+        Encode::from_to( $$txtref, $from, $to, Encode::XMLCREF() );
     }
     elsif ( (  uc($from) eq "ISO-8859-1"
             || uc($from) eq "US-ASCII"

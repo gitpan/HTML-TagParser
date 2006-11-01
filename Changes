@@ -1,5 +1,9 @@
 # HTML::TagParser Changes
 
+2006/11/01 (0.14)
+    * FB_XMLCREF -> XMLCREF changed. see [Jcode5 802]
+    * POD typo fixed.
+
 2006/05/06 (0.13)
     * CPAN release
 

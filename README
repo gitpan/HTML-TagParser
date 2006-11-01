@@ -45,7 +45,7 @@ DESCRIPTION
 
 METHODS
   $html = HTML::TagParser->new();
-    This method constructs a empty instance of the "HTML::TagParser" class.
+    This method constructs an empty instance of the "HTML::TagParser" class.
 
   $html = HTML::TagParser->new( $url );
     If new() is called with a URL, this method fetches a HTML file from
@@ -60,14 +60,14 @@ METHODS
     If new() is called with a string of HTML source code, this method parses
     it and returns its instance.
 
-  $html = HTML::TagParser->fetch( $url, %param );
+  $html->fetch( $url, %param );
     This method fetches a HTML file from remote web server and parse it. The
     second argument is optional parameters for URI::Fetch module.
 
-  $html = HTML::TagParser->open( $file );
+  $html->open( $file );
     This method parses a local HTML file.
 
-  $html = HTML::TagParser->parse( $source );
+  $html->parse( $source );
     This method parses a string of HTML source code.
 
   $elem = $html->getElementById( $id );
@@ -106,8 +106,8 @@ HTML::TagParser::Element SUBCLASS
     This method returns the value of $elem's attributes which name is $key.
 
 INTERNATIONALIZATION
-    This module natively understands a character set of document by reading
-    its meta element.
+    This module natively understands the character encoding used in document
+    by parsing its meta element.
 
         <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
 
