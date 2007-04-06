@@ -1,6 +1,6 @@
 =head1 NAME
 
-HTML::TagParser - Yet another HTML tag parser by pure Perl implementation
+HTML::TagParser - Yet another HTML document parser with DOM-like methods
 
 =head1 SYNOPSIS
 
@@ -12,13 +12,15 @@ Parse a HTML file and find its <title> element's value.
 
 Parse a HTML source and find its first <form action=""> attribute's value.
 
-    my $html = HTML::TagParser->new( '<html><form action="hoge.cgi"></form></html>' );
+    my $src  = '<html><form action="hoge.cgi">...</form></html>';
+    my $html = HTML::TagParser->new( $src );
     my $elem = $html->getElementsByTagName( "form" );
     print "<form action=\"", $elem->getAttribute("action"), "\">\n" if ref $elem;
 
 Fetch a HTML file via HTTP, and display its all <a> elements and attributes.
 
-    my $html = HTML::TagParser->new( "http://www.kawa.net/xp/index-e.html" );
+    my $url  = 'http://www.kawa.net/xp/index-e.html';
+    my $html = HTML::TagParser->new( $url );
     my @list = $html->getElementsByTagName( "a" );
     foreach my $elem ( @list ) {
         my $tagname = $elem->tagName;
@@ -37,8 +39,8 @@ Fetch a HTML file via HTTP, and display its all <a> elements and attributes.
 
 =head1 DESCRIPTION
 
-HTML::TagParser is a pure Perl implementaion for parsing HTML files.
-This module provides some methods like DOM.
+HTML::TagParser is a pure Perl module which parses HTML/XHTML files.
+This module provides some methods like DOM interface.
 This module is not strict about XHTML format
 because many of HTML pages are not strict.
 You know, many pages use <br> elemtents instead of <br/>
@@ -142,9 +144,9 @@ Yusuke Kawasaki, http://www.kawa.net/
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2006 Yusuke Kawasaki.  All rights reserved.  This program
-is free software; you can redistribute it and/or modify it under the same
-terms as Perl itself.
+Copyright (c) 2006-2007 Yusuke Kawasaki. All rights reserved.
+This program is free software; you can redistribute it and/or 
+modify it under the same terms as Perl itself.
 
 =cut
 # ----------------------------------------------------------------
@@ -155,7 +157,7 @@ use Symbol;
 use Carp;
 
 use vars qw( $VERSION );
-$VERSION = "0.14";
+$VERSION = "0.16";
 
 my $J2E        = {qw( jis ISO-2022-JP sjis Shift_JIS euc EUC-JP ucs2 UCS2 )};
 my $E2J        = { map { lc($_) } reverse %$J2E };
@@ -169,7 +171,7 @@ sub new {
     return $self unless defined $src;
 
     if ( $src =~ m#^https?://\w# ) {
-        $self->fetch($src,@_);
+        $self->fetch( $src, @_ );
     }
     elsif ( $src !~ m#[\<\>\|]# && -f $src ) {
         $self->open($src);
@@ -187,9 +189,10 @@ sub fetch {
     if ( !defined $URI::Fetch::VERSION ) {
         local $@;
         eval { require URI::Fetch; };
-        die "URI::Fetch is required: $url" if $@;
+        Carp::croak "URI::Fetch is required: $url" if $@;
     }
     my $res = URI::Fetch->fetch( $url, @_ );
+    Carp::croak "URI::Fetch failed: $url" unless ref $res;
     return if $res->is_error();
     $self->{modified} = $res->last_modified();
     my $text = $res->content();
@@ -234,7 +237,7 @@ sub getElementsByTagName {
 
     my $flat = $self->{flat};
     my $out = [];
-    for( my $i=0; $i<=$#$flat; $i++ ) {
+    for( my $i = 0 ; $i <= $#$flat ; $i++ ) {
         next if ( $flat->[$i]->[001] ne $tagname );
         next if $flat->[$i]->[000];                 # close
         my $elem = HTML::TagParser::Element->new( $flat, $i );
@@ -324,7 +327,7 @@ sub innerText {
     my $elem = $flat->[$cur];
     return $elem->[005] if defined $elem->[005];    # cache
     return if $elem->[000];                         # </xxx>
-    return if ( defined $elem->[002] && $elem->[002] =~ m#/$# );      # <xxx/>
+    return if ( defined $elem->[002] && $elem->[002] =~ m#/$# ); # <xxx/>
 
     my $tagname = $elem->[001];
     my $list    = [];
@@ -346,7 +349,9 @@ sub attributes {
     return $elem->[004] if ref $elem->[004];    # cache
     return unless defined $elem->[002];
     my $attr = {};
-    while ( $elem->[002] =~ m/([^\s\=\"\']+)(=(?:(")(.*?)"|(')(.*?)'|([^'"\s]+)))?/sg ) {
+    while ( $elem->[002] =~ m{
+        ([^\s\=\"\']+)(\s*=\s*(?:(")(.*?)"|(')(.*?)'|([^'"\s=]+)['"]*))?
+    }sgx ) {
         my $key  = $1;
         my $test = $2;
         my $val  = ( $3 ? $4 : ( $5 ? $6 : $7 ));
@@ -400,12 +405,16 @@ sub html_to_flat {
             (!-- .*? -- | ![^\-] .*? )
         ) > ([^<]*)
     }sxg ) {
+        #  [000]  $1  close
+        #  [001]  $2  tagName
+        #  [002]  $3  attributes
+        #         $4  comment element
+        #  [003]  $5  content
         next if defined $4;
         my $array = [ $1, $2, $3, $5 ];
         $array->[001] =~ tr/A-Z/a-z/;
-
-        #       $array->[003] =~ s/^\s+//s;
-        #       $array->[003] =~ s/\s+$//s;
+        #  $array->[003] =~ s/^\s+//s;
+        #  $array->[003] =~ s/\s+$//s;
         push( @$flat, $array );
     }
     $flat;

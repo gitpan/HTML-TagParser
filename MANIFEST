@@ -17,8 +17,9 @@ Changes
 MANIFEST
 META.yml
 make-dist.sh
-t/23_flickr.t
 t/22_yahoo.t
+t/11_invalid_attr.t
+t/23_flickr.t
 t/21_index-e.t
 t/20_index-j.t
 t/09_broken.t

@@ -6,68 +6,134 @@
 	<meta name="keywords" content="photography, digital photography, cameraphones, camera, hobby photography, photo, digital camera, compactflash, smartmedia, cameras, canon, nikon, olympus, fujifilm">	
 	<meta name="description" content="Flickr is almost certainly the best online photo management and sharing application in the world. Show off your favorite photos to the world, securely and privately show photos to your friends and family, or blog the photos you take with a cameraphone.">
 	<meta http-equiv="imagetoolbar" content="no">
-	<link href="/css/flickr.css.v1.669" rel="stylesheet" type="text/css">	
+	<link href="http://l.yimg.com/www.flickr.com/css/c_flickr.css.v1.715.7" rel="stylesheet" type="text/css">	
   	<link rel="alternate"	type="application/atom+xml" title="Flickr: Photos from Yusuke Kawasaki Atom feed" href="http://api.flickr.com/services/feeds/photos_public.gne?id=50902562@N00&amp;format=atom">
 	<link rel="alternate"	type="application/rss+xml" title="Flickr: Photos from Yusuke Kawasaki RSS feed" href="http://api.flickr.com/services/feeds/photos_public.gne?id=50902562@N00&amp;format=rss_200">
 
 	<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
-<link href="/css/sets.css.v1.8" rel="stylesheet" type="text/css">
-<link href="/css/person.css.v1.16" rel="stylesheet" type="text/css">
+<link href="http://l.yimg.com/www.flickr.com/css/c_sets.css.v1.16.7" rel="stylesheet" type="text/css" />
+<link href="http://l.yimg.com/www.flickr.com/css/c_person.css.v1.20.7" rel="stylesheet" type="text/css" />
+
+
+<style type="text/css">
+
+.trans_png {
+   behavior: url('/javascript/pngbehavior.htc');
+   border:0;
+}
+
+</style>
 
 <script type="text/javascript">
-var global_magisterLudi = 'a38511b57a847f3bd0f8681a1d6dd5ad',
-global_auth_hash = '0',
+var global_magisterLudi = 'b0aa4b645c1ee652d8fba08892b785c2',
+global_auth_hash = '99ee957fb0100e3d995f436b84fb5c15',
 global_auth_token = '',
-global_flickr_secret = 'aa9c16075fc063c0',
+global_flickr_secret = '7d4a867c2595d33d',
 global_slideShowVersion = '1.6',
-global_slideShowCodeVersion = '1.28',
+global_slideShowCodeVersion = '1.36',
 global_nsid = '',
+global_dbid = '',
 global_name ='',
+global_expire ='',
 global_icon_url ='http://www.flickr.com/images/buddyicon.jpg?',
-global_tag_limit = 40,
-global_group_limit = 10;
-global_photos_ids_limit = 20;
+global_tag_limit = '75',
+global_collection_depth_limit = 5,
+global_contact_limit = '3000',
+global_eighteen = 1,
+global_full_screen_show = 0,
+global_group_limit = 10,
+global_photos_ids_limit = 20,
+disable_geo = 0;
+global_rper = 0;
 
-var _img_root = 'http://static.flickr.com/';
-var _site_root = 'http://www.flickr.com';   
+var _photo_root = 'http://farm.static.flickr.com/';
+var _site_root = 'http://www.flickr.com';
+var _images_root = 'http://l.yimg.com/www.flickr.com/images';
+
 </script>
 
-<script type="text/javascript" src="/javascript/global.js.v1.278"></script>
+<script type="text/javascript" src="/javascript/global.js.v1.358.7"></script>
 <script type="text/javascript">
 
 </script>
-<script type="text/javascript" src="/javascript/xmlhttprequest.js.v1.6"></script>
-<script type="text/javascript" src="/javascript/api.js.v1.77"></script>
-<script type="text/javascript" src="/javascript/fpi.js.v1.3"></script>
-<script type="text/javascript" src="/javascript/md5.js.v1.4"></script>
-<script type="text/javascript" src="/javascript/tooltips.js.v1.14"></script>
-<script type="text/javascript" src="/javascript/dejaview.js.v1.5"></script>
-<script type="text/javascript" src="/javascript/insitu.js.v1.13"></script>
-<script type="text/javascript" src="/javascript/slideshow.js.v1.17"></script>
-<script type="text/javascript" src="/javascript/json.js.v1.1"></script>
-<script type="text/javascript" src="/javascript/candy_buttons.js.v1.44"></script>
-<script type="text/javascript" src="/javascript/anim.js.v1.30"></script>
-<script type="text/javascript" src="/javascript/easing.js.v1.5"></script>
-<script type="text/javascript" src="/javascript/output.js.v1.35"></script>
-<script type="text/javascript" src="/javascript/one_photo_edit.js.v1.76"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/javascript/fold_main.js.v1.35.1.6.1.85.1.3.1.4.1.14.1.5.1.31.1.21.1.1.1.51.1.40.1.5.1.2.1.1.1.1.1.97.7"></script>
+
+
+<script type="text/javascript" src="/javascript/output.js.v1.104.7."></script>
+
+
 
 <script type="text/javascript">
-var global_joinDateStr = '31st October, 2006',
+var global_joinDateStr = '6th April, 2007',
 dA = global_joinDateStr.split(' '),
-global_joinDate = new Date(dA[2], _get_month_index(dA[1].substr(0,dA[1].length-1)), parseInt(dA[0])),
-global_time_stamp = '061031220525';
+global_joinDate = new Date(dA[2], F.get_month_index(dA[1].substr(0,dA[1].length-1)), parseInt(dA[0])),
+global_time_stamp = '070406035104';
+
+
+
+// Dean Edwards/Matthias Miller/John Resig
+
+/* for Mozilla/Opera9 */
+if (document.addEventListener) {
+    document.addEventListener("DOMContentLoaded", F._window_onload_dom, false);
+}
+
+/* for Internet Explorer */
+/*@cc_on @*/
+/*@if (@_win32)
+    document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+    var script = document.getElementById("__ie_onload");
+    script.onreadystatechange = function() {
+        if (this.readyState == "complete") {
+            F._window_onload_dom(); // call the onload handler
+        }
+    };
+/*@end @*/
+
+/* for Safari */
+if (/WebKit/i.test(navigator.userAgent)) { // sniff
+    F.onload_dom_timer = setInterval(function() {
+        if (/loaded|complete/.test(document.readyState)) {
+            F._window_onload_dom(); // call the onload handler
+        }
+    }, 10);
+}
+
+
+
+
+
 </script>
+
+
 
 
 </head>
 <body>
-<div id="beacon"><img style="border:0; display:block; height:0; width:0; margin:0; padding:0" alt="" src="http://www.flickr.com/images/spaceout.gif?0794041001162361125" height="0" width="0" border="0" /><iframe src="http://us.adserver.yahoo.com/a?f=792600013&amp;p=flickr&amp;l=Z&amp;c=sh" width="0" height="0" marginwidth="0" marginheight="0" frameborder="0" scrolling="no"></iframe></div>
+
+<div id="beacon"><img src="http://geo.yahoo.com/f?s=792600013&t=c48627452df44261dc965695025c3730" width="0" height="0" alt="" /></div>
 
 <a name="top"></a>
-
-
-
-
 
 
 
@@ -83,9 +149,8 @@ global_time_stamp = '061031220525';
 	<table cellspacing="0" class="Header" border="0">
 		<tr>
 			<td class="FlickrLogo">
-				<a href="/"><img src="/images/flickr_logo_gamma.gif.v1.2" width="98" height="26" alt="Flickr logo. If you click it, you'll go home" /></a>
-	
-			</td>
+				<a href="/"><img src="http://l.yimg.com/www.flickr.com/images/flickr_logo_gamma.gif.v1.2.7" width="98" height="26" alt="Flickr logo. If you click it, you'll go home" /></a>
+					</td>
 			<td class="Status">
 					You aren't signed in
 				&nbsp;&nbsp;&nbsp;
@@ -99,9 +164,12 @@ global_time_stamp = '061031220525';
 		<tr>
 			<td class="Primary" width="500">
 
-	<div id="candy_nav_button_bar" class="candy_button_bar"><a href="/" class="image_link"><img src="/images/candy_nav_button_home_default.gif" id="candy_nav_button_home" class="candy_button" width="57" height="22" alt="Click to go to the home page" border="0" style="margin-right: 10px;"></a><a href="/learn_more.gne"><img src="/images/candy_nav_button_learnmore_default.gif" id="candy_nav_button_learnmore" class="candy_button" width="88" height="22" alt="Learn More about Flickr" border="0"></a><a href="/signup/"><img src="/images/candy_nav_button_signup_default.gif" id="candy_nav_button_signup" class="candy_button" width="74" height="22" alt="Sign Up for a Free Account" border="0"></a><a href="/explore/"><img src="/images/candy_nav_button_explore_default.gif" id="candy_nav_button_explore" class="candy_split_nav_button" width="84" height="22" alt="Explore Flickr" border="0"></a><div class="candy_menu" id="candy_nav_menu_explore"><a title="Explore page" href="/explore/">Explore Page</a><a title="Last 7 days interesting" href="/explore/interesting/7days/">Last 7 Days Interesting</a><a title="Calendar" href="/explore/interesting/2006/10/">Calendar</a><a title="A year ago today" href="/explore/interesting/2005/10/">A Year Ago Today</a><a title="Photos on a map" href="/map/" class="menu_item_line_above">Photos on a map</a><a title="Popular tags" href="/photos/tags/" class="menu_item_line_above">Popular Tags</a><a title="Most recent photos" href="/photos/">Most Recent Photos</a><a title="Creative commons" href="/creativecommons/">Creative Commons</a><a title="FlickrBlog" href="http://blog.flickr.com/" class="menu_item_line_above">FlickrBlog</a><a title="Do more with your photos" href="/do/more/" class="menu_item_line_above">Do More with Your Photos</a><a title="Flickr services" href="/services/">Flickr Services</a></div></div>
-	<script type="text/javascript">_decorate(_ge('candy_nav_button_bar'), 0, 1);</script>				
+
+	<div id="candy_nav_button_bar" class="candy_button_bar"><a href="/" class="image_link"><img src="http://l.yimg.com/www.flickr.com/images/candy_nav_button_home_default.gif" id="candy_nav_button_home" class="candy_button" width="57" height="22" alt="Click to go to the home page" border="0" style="margin-right: 10px;"></a><a href="/learn_more.gne"><img src="http://l.yimg.com/www.flickr.com/images/candy_nav_button_learnmore_default.gif" id="candy_nav_button_learnmore" class="candy_button" width="88" height="22" alt="Learn More about Flickr" border="0"></a><a href="/signup/"><img src="http://l.yimg.com/www.flickr.com/images/candy_nav_button_signup_default.gif" id="candy_nav_button_signup" class="candy_button" width="74" height="22" alt="Sign Up for a Free Account" border="0"></a><a href="/explore/"><img src="http://l.yimg.com/www.flickr.com/images/candy_nav_button_explore_default.gif" id="candy_nav_button_explore" class="candy_split_nav_button" width="84" height="22" alt="Explore Flickr" border="0"></a><div class="candy_menu" id="candy_nav_menu_explore"><a title="Explore page" href="/explore/">Explore Page</a><a title="Last 7 days interesting" href="/explore/interesting/7days/">Last 7 Days Interesting</a><a title="Calendar" href="/explore/interesting/2007/04/">Calendar</a><a title="A year ago today" href="/explore/interesting/2006/04/">A Year Ago Today</a><a title="Photos on a map" href="/map/" class="menu_item_line_above">World Map</a><a title="Camera Finder" href="/cameras/">Camera Finder</a><a title="Popular tags" href="/photos/tags/" class="menu_item_line_above">Popular Tags</a><a title="Most recent photos" href="/photos/">Most Recent Photos</a><a title="Creative commons" href="/creativecommons/">Creative Commons</a><a title="FlickrBlog" href="http://blog.flickr.com/" class="menu_item_line_above">FlickrBlog</a><a title="Do more with your photos" href="/do/more/" class="menu_item_line_above">Do More with Your Photos</a><a title="Flickr services" href="/services/">Flickr Services</a></div></div>
+	<script type="text/javascript">_decorate(_ge('candy_nav_button_bar'), 0, 1);</script>		
+	
 					
+	
 			</td>
 
 
@@ -117,13 +185,17 @@ global_time_stamp = '061031220525';
 		<input name="w" type="hidden" value="50902562@N00">
 		<input name="m" type="hidden" value="">
 		<input name="s" type="hidden" value="">
-		<span id="headersearchbutton1"><input value="Search" type="image" src="/images/header_search_button.png" /></span>
+		<span id="headersearchbutton1"><input value="Search" type="image" src="http://l.yimg.com/www.flickr.com/images/header_search_button.png" /></span>
 	</form>
 </td>
 <td id="search_header_button_td" width="82">
 
-	<div id="candy_search_button_bar" class="candy_button_bar" style=""><img src="/images/candy_nav_button_search_default.gif" id="candy_nav_button_search" class="candy_split_nav_button" width="82" height="22" alt="Search" border="0" onclick="_do_header_search('50902562@N00', '', '/search/', '');return false;"><div class="candy_menu" id="candy_nav_menu_search"><a title="Everyone's Photos" href="/search/" onclick="_do_header_search('all', ''); return false;">Everyone's Photos</a><a title="Your Photos" href="/search/" onclick="_do_header_search('', ''); return false;">Your Photos</a><a title="Groups" href="/search/groups/" onclick="_do_header_search('', '', '/search/groups/'); return false;">Groups</a><a title="Flickr Members" href="/search/people/" onclick="_do_header_search('', 'names', '/search/people/'); return false;">Flickr Members</a><a title="For a Location" href="/map/" onclick="_do_header_search('location', '', '/map/'); return false;">For a Location</a>				<a class="menu_item_line_above" title="Yusuke Kawasaki's Photos" href="/search/" onclick="_do_header_search('50902562@N00', ''); return false;"><b>&#183;</b> Yusuke Kawasaki's Photos</a>
+
+	<div id="candy_search_button_bar" class="candy_button_bar" style=""><img src="http://l.yimg.com/www.flickr.com/images/candy_nav_button_search_default.gif" id="candy_nav_button_search" class="candy_split_nav_button" width="82" height="22" alt="Search" border="0" onclick="_do_header_search('50902562@N00', '', '/search/', '');return false;"><div class="candy_menu" id="candy_nav_menu_search"><a title="Everyone's Photos" href="/search/" onclick="_do_header_search('all', ''); return false;">Everyone's Photos</a><a title="Your Photos" href="/search/" onclick="_do_header_search('', ''); return false;">Your Photos</a><a title="Groups" href="/search/groups/" onclick="_do_header_search('', '', '/search/groups/'); return false;">Groups</a><a title="Flickr Members" href="/search/people/" onclick="_do_header_search('', 'names', '/search/people/'); return false;">Flickr Members</a><a title="For a Location" href="/map/" onclick="_do_header_search('location', '', '/map/'); return false;">For a Location</a>				<a class="menu_item_line_above" title="Yusuke Kawasaki's Photos" href="/search/" onclick="_do_header_search('50902562@N00', ''); return false;"><b>&#183;</b> Yusuke Kawasaki's Photos</a>
 			</div></div>
+	
+	<script type="text/javascript">_decorate(_ge('candy_search_button_bar'), 0, 1);</script>
+
 	
 	<script type="text/javascript">
 	var b1 = _ge('headersearchbutton1');
@@ -132,7 +204,7 @@ global_time_stamp = '061031220525';
 	_ge('search_header_form_td').style.paddingBottom = '2px';
 	
 	_ge('candy_search_button_bar').style.display = 'block';
-	_decorate(_ge('candy_search_button_bar'), 0, 1);
+	
 	
 	var f = _ge('headersearchform');
 	
@@ -141,12 +213,14 @@ global_time_stamp = '061031220525';
 	f.q.onfocus = function() {
 		if (this.value == 'Search Yusuke Kawasaki\'s photos') this.value = '';
 		this.style.color = '#222';
+		if (window.map) map._disableKeys = true;
 	}
 	
 	f.q.onblur = function() {
 		if (this.value != '') return;
 		this.style.color = '#999';
 		this.value = 'Search Yusuke Kawasaki\'s photos';
+		if (window.map) map._disableKeys = false;
 	}
 	
 	var _do_header_search = function(w, m, action, s) {
@@ -213,25 +287,28 @@ global_time_stamp = '061031220525';
 <div id="Main">
 
 
+
 <table width="760" cellspacing="0" id="SubNav">
 	<tr>
 		<td class="Buddy">
-			<a href="/photos/u-suke/"><img src="http://static.flickr.com/40/buddyicons/50902562@N00.jpg?1136221538" alt="Yusuke Kawasaki's buddy icon" width="48" height="48" /></a>
+			<a href="/photos/u-suke/"><img src="http://farm1.static.flickr.com/40/buddyicons/50902562@N00.jpg?1136221538" alt="Yusuke Kawasaki's buddy icon" width="48" height="48" /></a>
 		</td>
 		<td class="Section">
 			<h1>
 	    			Yusuke Kawasaki's photos
 														
 			</h1>
+			
 			<p class="Links">
-				<a href="/photos/u-suke/sets/">Sets</a>				<img src="/images/subnavi_dots.gif" alt="" width="1" height="11" />
-				<a href="/photos/u-suke/tags/">Tags</a>				<img src="/images/subnavi_dots.gif" alt="" width="1" height="11" />
+																	<a href="/photos/u-suke/sets/">Sets</a>				<img src="http://l.yimg.com/www.flickr.com/images/subnavi_dots.gif" alt="" width="1" height="11" />
+				<a href="/photos/u-suke/tags/">Tags</a>				<img src="http://l.yimg.com/www.flickr.com/images/subnavi_dots.gif" alt="" width="1" height="11" />
 	
 						
-				<a href="/photos/u-suke/archives/">Archives</a>				<img src="/images/subnavi_dots.gif" alt="" width="1" height="11" />
-				<a href="/photos/u-suke/favorites/">Favorites</a>				<img src="/images/subnavi_dots.gif" alt="" width="1" height="11" />
+				<a href="/photos/u-suke/archives/">Archives</a>				<img src="http://l.yimg.com/www.flickr.com/images/subnavi_dots.gif" alt="" width="1" height="11" />
+				<a href="/photos/u-suke/favorites/">Favorites</a>				<img src="http://l.yimg.com/www.flickr.com/images/subnavi_dots.gif" alt="" width="1" height="11" />
 				<a href="/people/u-suke/">Profile</a>
 			</p>
+			
 		</td>
 		<td class="Extras">
 		
@@ -239,40 +316,44 @@ global_time_stamp = '061031220525';
 				<span style="font-size: 14px;">
 				<a href="/photos/u-suke/show/" title="View recent photos as a slideshow"><b>View as slideshow</b></a> </span> 
 				<br />
-				&nbsp;&nbsp;(<a href="/photos/u-suke/show/" onclick="open_user_SlideShow('50902562@N00', '', '', '', 'firstIndex', 'firstId'); return false;" title="open in a new window">New window</a> <a href="/photos/u-suke/show/" onclick="open_user_SlideShow('50902562@N00', '', '', '', 'firstIndex', 'firstId'); return false;" title="open in a new window"><img src="/images/icon_new_window.gif" width="13" height="10" style="border: none;" alt="open in a new window" /></a>)
+				&nbsp;&nbsp;(<a href="/photos/u-suke/show/" onclick="open_user_SlideShow('50902562@N00', '', '', '', 'firstIndex', 'firstId'); return false;" title="open in a new window">New window</a> <a href="/photos/u-suke/show/" onclick="open_user_SlideShow('50902562@N00', '', '', '', 'firstIndex', 'firstId'); return false;" title="open in a new window"><img src="http://l.yimg.com/www.flickr.com/images/icon_new_window.gif" width="13" height="10" style="border: none;" alt="open in a new window" /></a>)
 			</div>
 					
 			
 					
 					
-			<img src="/images/spaceball.gif" alt="spacer!" width="200" height="1" />
+			<img src="http://l.yimg.com/www.flickr.com/images/spaceball.gif" alt="spacer!" width="200" height="1" />
 		</td>
 	</tr>
 </table>
 
 
-	<table width="100%" cellspacing="0" cellpadding="0">
-		<tr valign="top">
-			<td width="100%">
 
-<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.0&amp;appid=flickrMappr"></script>
-<script type="text/javascript" src="/javascript/photo_mini_map.js.v999.1162361125?javascript/photo_mini_map.js"></script>
-<script type="text/javascript">delete_photo = function(photo_id) {
-	if (window.confirm('Are you sure?')){
-		location.href='/photos/u-suke/?delete=' + photo_id + '&magic_cookie=0';
-	}
-}</script>
+	
+	<table width="100%" cellspacing="0" cellpadding="0" class="PhotoStream">
+		<tr valign="top">
+							<td width="100%" class="PhotosColumn">
+					<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.0&amp;appid=flickrMappr"></script>
+<script type="text/javascript" src="/javascript/photo_mini_map.js.v1.22.7"></script>
+
+<script type="text/javascript">
+delete_photo = function(photo_id) {
+	F._photo_vanisher.remove_photo(photo_id, '/photos/u-suke/', 'magic_cookie=99ee957fb0100e3d995f436b84fb5c15');
+}
+</script>
+
+<script type="text/javascript" src="/javascript/photo_cols.js.v1.1.7"></script>
 
 <table width="100%" cellspacing="0">
 	<tr valign="bottom">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_256355791">
 					<h4>OTENTO Vegetables, Den-en-chofu</h4>
 
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_254200598">
 					<h4>TRAX, Daiichi Hotel Tokyo（第一ホテル東京・トラックス）</h4>
 
 				</div>
@@ -280,21 +361,21 @@ global_time_stamp = '061031220525';
 	</tr>
 	<tr valign="top">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_256355791">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/256355791/"><img src="http://static.flickr.com/84/256355791_c96bb545b3_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/256355791/"><img src="http://farm1.static.flickr.com/84/256355791_c96bb545b3_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		All of these vegetables above
+    
+
+All of these vegetables above
 costs only less than 1,000
 YEN!
 I'm loving the super
 market, Otento,<a href="/photos/u-suke/256355791/">...</a>
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -310,19 +391,19 @@ market, Otento,<a href="/photos/u-suke/256355791/">...</a>
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_254200598">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/254200598/"><img src="http://static.flickr.com/108/254200598_cb5d618057_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/254200598/"><img src="http://farm1.static.flickr.com/108/254200598_cb5d618057_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		Sandwich and casual buffet costs
+    
+
+Sandwich and casual buffet costs
 1,500YEN for lunch. This
 satisfies my stomach heavy.
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -340,13 +421,13 @@ satisfies my stomach heavy.
 	</tr>
 	<tr valign="bottom">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_253343509">
 					<h4>McGriddles（マックグリドレス）</h4>
 
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_252347808">
 					<h4>Auto Ping-Pong（オートたっきゅう）</h4>
 
 				</div>
@@ -354,21 +435,21 @@ satisfies my stomach heavy.
 	</tr>
 	<tr valign="top">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_253343509">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/253343509/"><img src="http://static.flickr.com/110/253343509_fa3a201bc0_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/253343509/"><img src="http://farm1.static.flickr.com/110/253343509_fa3a201bc0_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		Only few of the limited
+    
+
+Only few of the limited
 McDonalds restaurants serves
 this menu in Japan.
 This has
 sweet muffin with<a href="/photos/u-suke/253343509/">...</a>
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -384,20 +465,20 @@ sweet muffin with<a href="/photos/u-suke/253343509/">...</a>
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_252347808">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/252347808/"><img src="http://static.flickr.com/86/252347808_a6b8637a56_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/252347808/"><img src="http://farm1.static.flickr.com/86/252347808_a6b8637a56_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		This is a table tennis game
+    
+
+This is a table tennis game
 machine which would shoot a ball
 out from the wall, I think. This
 costs<a href="/photos/u-suke/252347808/">...</a>
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -415,13 +496,13 @@ costs<a href="/photos/u-suke/252347808/">...</a>
 	</tr>
 	<tr valign="bottom">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_249447020">
 					<h4>Daifuku and Ohagi（大福・おはぎ）</h4>
 
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_249066981">
 					<h4>A Leke in the Hibiya Park（日比谷公園）</h4>
 
 				</div>
@@ -429,18 +510,18 @@ costs<a href="/photos/u-suke/252347808/">...</a>
 	</tr>
 	<tr valign="top">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_249447020">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/249447020/"><img src="http://static.flickr.com/83/249447020_5b24756343_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/249447020/"><img src="http://farm1.static.flickr.com/83/249447020_5b24756343_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		These are kind of Japanese
+    
+
+These are kind of Japanese
 confections.
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -456,18 +537,18 @@ confections.
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_249066981">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/249066981/"><img src="http://static.flickr.com/92/249066981_cf7b4edbac_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/249066981/"><img src="http://farm1.static.flickr.com/92/249066981_cf7b4edbac_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		A Japanese garden with small
+    
+
+A Japanese garden with small
 lake.
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -485,13 +566,13 @@ lake.
 	</tr>
 	<tr valign="bottom">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_249066979">
 					<h4>Hibiya Park Center（日比谷パークセンター）</h4>
 
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_249066977">
 					<h4>Rings for gymnastics（つり輪）</h4>
 
 				</div>
@@ -499,17 +580,17 @@ lake.
 	</tr>
 	<tr valign="top">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_249066979">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/249066979/"><img src="http://static.flickr.com/82/249066979_741323a851_m.jpg" alt="" width="180" height="240" /></a>
-	</p>
+	    		<a href="/photos/u-suke/249066979/"><img src="http://farm1.static.flickr.com/82/249066979_741323a851_m.jpg" width="180" height="240" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		Today's menu: YEN800-
-	</p>
+    
+
+Today's menu: YEN800-
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -525,17 +606,17 @@ lake.
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_249066977">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/249066977/"><img src="http://static.flickr.com/95/249066977_92be93afe6_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/249066977/"><img src="http://farm1.static.flickr.com/95/249066977_92be93afe6_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		In the Hibiya Park.
-	</p>
+    
+
+In the Hibiya Park.
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -553,13 +634,13 @@ lake.
 	</tr>
 	<tr valign="bottom">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_249066974">
 					<h4>Flowers in the Hibiya Park（日比谷公園）</h4>
 
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_249066971">
 					<h4>A salaryman and the blue sky（サラリーマンと青空）</h4>
 
 				</div>
@@ -567,18 +648,18 @@ lake.
 	</tr>
 	<tr valign="top">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_249066974">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/249066974/"><img src="http://static.flickr.com/97/249066974_4c8a7e9dbe_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/249066974/"><img src="http://farm1.static.flickr.com/97/249066974_4c8a7e9dbe_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		A green-full park in the middle
+    
+
+A green-full park in the middle
 of Tokyo.
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -594,18 +675,18 @@ of Tokyo.
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_249066971">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/249066971/"><img src="http://static.flickr.com/88/249066971_1eeaf8dfff_m.jpg" alt="" width="180" height="240" /></a>
-	</p>
+	    		<a href="/photos/u-suke/249066971/"><img src="http://farm1.static.flickr.com/88/249066971_1eeaf8dfff_m.jpg" width="180" height="240" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		A white-collar worker takes a
+    
+
+A white-collar worker takes a
 rest in the Hibiya Park of noon.
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -623,13 +704,13 @@ rest in the Hibiya Park of noon.
 	</tr>
 	<tr valign="bottom">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_248435707">
 					<h4>Kurkuru Blog Index（くるくるブログ）</h4>
 
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_243938372">
 					<h4>Kurukuru Blog（くるくるブログ）</h4>
 
 				</div>
@@ -637,18 +718,18 @@ rest in the Hibiya Park of noon.
 	</tr>
 	<tr valign="top">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_248435707">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/248435707/"><img src="http://static.flickr.com/96/248435707_340dfcb703_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/248435707/"><img src="http://farm1.static.flickr.com/96/248435707_340dfcb703_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		 Kurukuru Blog  enabled its new
+    
+
+ Kurukuru Blog  enabled its new
 index page today.
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -664,19 +745,19 @@ index page today.
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_243938372">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/243938372/"><img src="http://static.flickr.com/94/243938372_647cc1d0fa_m.jpg" alt="" width="240" height="185" /></a>
-	</p>
+	    		<a href="/photos/u-suke/243938372/"><img src="http://farm1.static.flickr.com/94/243938372_647cc1d0fa_m.jpg" width="240" height="185" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		We've released the Kurukuru Blog
+    
+
+We've released the Kurukuru Blog
 which is a blog matching service
 deliveried for twelve<a href="/photos/u-suke/243938372/">...</a>
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -694,13 +775,13 @@ deliveried for twelve<a href="/photos/u-suke/243938372/">...</a>
 	</tr>
 	<tr valign="bottom">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_242025895">
 					<h4>Sugoichizu Maps（スゴイ地図）</h4>
 
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_242025889">
 					<h4>Dokoiku? Maps（ドコイク地図）</h4>
 
 				</div>
@@ -708,19 +789,19 @@ deliveried for twelve<a href="/photos/u-suke/243938372/">...</a>
 	</tr>
 	<tr valign="top">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_242025895">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/242025895/"><img src="http://static.flickr.com/96/242025895_03321d65c5_m.jpg" alt="" width="240" height="147" /></a>
-	</p>
+	    		<a href="/photos/u-suke/242025895/"><img src="http://farm1.static.flickr.com/96/242025895_03321d65c5_m.jpg" width="240" height="147" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		The  Sugoichizu  is a brand new
+    
+
+The  Sugoichizu  is a brand new
 map service in Japan released
 today by Recruit Co.,Ltd.<a href="/photos/u-suke/242025895/">...</a>
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -736,20 +817,20 @@ today by Recruit Co.,Ltd.<a href="/photos/u-suke/242025895/">...</a>
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_242025889">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/242025889/"><img src="http://static.flickr.com/80/242025889_20620a4288_m.jpg" alt="" width="240" height="167" /></a>
-	</p>
+	    		<a href="/photos/u-suke/242025889/"><img src="http://farm1.static.flickr.com/80/242025889_20620a4288_m.jpg" width="240" height="167" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		The  Dokoiku? Maps  is a full
+    
+
+The  Dokoiku? Maps  is a full
 Ajax-ed map service in Japan
 released by Recruit Co.,Ltd. I
 like this<a href="/photos/u-suke/242025889/">...</a>
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -767,13 +848,13 @@ like this<a href="/photos/u-suke/242025889/">...</a>
 	</tr>
 	<tr valign="bottom">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_238160831">
 					<h4>OTENTO（畑の台所）</h4>
 
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_238160830">
 					<h4>Tamagawa and Shinkansen（新幹線）</h4>
 
 				</div>
@@ -781,17 +862,17 @@ like this<a href="/photos/u-suke/242025889/">...</a>
 	</tr>
 	<tr valign="top">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_238160831">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/238160831/"><img src="http://static.flickr.com/88/238160831_d55116a3ec_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/238160831/"><img src="http://farm1.static.flickr.com/88/238160831_d55116a3ec_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		A super market at Dennen-Chofu
-	</p>
+    
+
+A super market at Dennen-Chofu
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -807,18 +888,18 @@ like this<a href="/photos/u-suke/242025889/">...</a>
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_238160830">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/238160830/"><img src="http://static.flickr.com/93/238160830_17a5ea0846_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/238160830/"><img src="http://farm1.static.flickr.com/93/238160830_17a5ea0846_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		Shinkansen is corssing Tamagawa
+    
+
+Shinkansen is corssing Tamagawa
 River.
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -836,13 +917,13 @@ River.
 	</tr>
 	<tr valign="bottom">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_238160828">
 					<h4>Tamagawa River（多摩川）</h4>
 
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_title_238160826">
 					<h4>Kugahara Shusse Kannon（久が原出世観音）</h4>
 
 				</div>
@@ -850,17 +931,17 @@ River.
 	</tr>
 	<tr valign="top">
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_238160828">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/238160828/"><img src="http://static.flickr.com/90/238160828_7340f706dc_m.jpg" alt="" width="240" height="180" /></a>
-	</p>
+	    		<a href="/photos/u-suke/238160828/"><img src="http://farm1.static.flickr.com/90/238160828_7340f706dc_m.jpg" width="240" height="180" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		Boys are playing baseball.
-	</p>
+    
+
+Boys are playing baseball.
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -876,18 +957,18 @@ River.
 				</div>
 		</td>
 		<td>
-			<div class="StreamView">
+			<div class="StreamView" id="sv_body_238160826">
 				
 	<p class="Photo">
-		<a href="/photos/u-suke/238160826/"><img src="http://static.flickr.com/81/238160826_55452788fb_m.jpg" alt="" width="180" height="240" /></a>
-	</p>
+	    		<a href="/photos/u-suke/238160826/"><img src="http://farm1.static.flickr.com/81/238160826_55452788fb_m.jpg" width="180" height="240" alt="" /></a>
+			</p>
 
-	<p class="Desc">
-		This is a god for success, I
+    
+
+This is a god for success, I
 guess.
-	</p>
 	<p class="Privacy">
-	<img src="/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
+	<img src="http://l.yimg.com/www.flickr.com/images/icon_public.gif" alt="This photo is public" title="This photo is public" width="15" height="15" class="absmiddle" />
 
     &nbsp;<span style="font-size: 12px;">&#169;</span> All rights reserved.
 	
@@ -920,24 +1001,21 @@ guess.
 	<a id="close_button" style="height:16px; overflow:visible"></a>
 	</div>
 
-
-			</td>
-			<td class="SetsColumn">
-			
-			<div class="SetSpace">
-	<div class="Set">
-		<div class="SetCase"><div class="setLinkDiv"><a class="setLink" href="/photos/u-suke/sets/72157594203933887/"><img class="setThumb" src="http://static.flickr.com/69/192902655_f3049060c9_s.jpg" width="75" height="75" alt="Gaami Muhammad Ali, Cairo - カイロ・モハメドアリモスク" /></a></div>
+				</td>			
+				<td class="SetsColumn">
+						<div class="SetSpace">
+						<div class="Set">
+		<div class="SetCase"><div class="setLinkDiv"><a class="setLink" href="/photos/u-suke/sets/72157594203933887/"><img class="setThumb" src="http://farm1.static.flickr.com/69/192902655_f3049060c9_s.jpg" width="75" height="75" alt="Gaami Muhammad Ali, Cairo - カイロ・モハメドアリモスク" /></a></div>
 		</div>
-		<h4><a class="Seta" href="/photos/u-suke/sets/72157594203933887/" title="Egypt &amp; Turkey">Egypt &amp; <wbr>Turkey</a></h4>		
+		<h4><a class="Seta" href="/photos/u-suke/sets/72157594203933887/" title="Egypt &amp; Turkey">Egypt &amp;<wbr> </wbr>Turkey</a></h4>		
 		<p>
 			<b>18</b> photos
 		</p>	
 		
 	</div>
-
-				<br clear="all" />
-	<div class="Set">
-		<div class="SetCase"><div class="setLinkDiv"><a class="setLink" href="/photos/u-suke/sets/72057594053479534/"><img class="setThumb" src="http://static.flickr.com/26/89187935_7eaab6b586_s.jpg" width="75" height="75" alt="P1000739-640" /></a></div>
+			<br clear="all" />
+						<div class="Set">
+		<div class="SetCase"><div class="setLinkDiv"><a class="setLink" href="/photos/u-suke/sets/72057594053479534/"><img class="setThumb" src="http://farm1.static.flickr.com/26/89187935_7eaab6b586_s.jpg" width="75" height="75" alt="P1000739-640" /></a></div>
 		</div>
 		<h4><a class="Seta" href="/photos/u-suke/sets/72057594053479534/" title="Mexico City">Mexico City</a></h4>		
 		<p>
@@ -945,10 +1023,9 @@ guess.
 		</p>	
 		
 	</div>
-
-				<br clear="all" />
-	<div class="Set">
-		<div class="SetCase"><div class="setLinkDiv"><a class="setLink" href="/photos/u-suke/sets/72057594053478932/"><img class="setThumb" src="http://static.flickr.com/12/89187933_28bf060201_s.jpg" width="75" height="75" alt="P1000681-640" /></a></div>
+			<br clear="all" />
+						<div class="Set">
+		<div class="SetCase"><div class="setLinkDiv"><a class="setLink" href="/photos/u-suke/sets/72057594053478932/"><img class="setThumb" src="http://farm1.static.flickr.com/12/89187933_28bf060201_s.jpg" width="75" height="75" alt="P1000681-640" /></a></div>
 		</div>
 		<h4><a class="Seta" href="/photos/u-suke/sets/72057594053478932/" title="San Francisco">San Francisco</a></h4>		
 		<p>
@@ -956,13 +1033,14 @@ guess.
 		</p>	
 		
 	</div>
-
-				<br clear="all" />
-			</div>
-				<img src="/images/spaceball.gif" alt="spacer image" width="200" height="1" style="border: none;">
-			</td>			
-		</tr>
-	</table>				
+			<br clear="all" />
+					</div>
+<img src="http://l.yimg.com/www.flickr.com/images/spaceball.gif" alt="spacer image" width="195" height="1" style="border: none;">
+					
+										
+				</td>
+					</tr>
+	</table>
 
 <div class="Pages">
 	<div class="Paginator">
@@ -981,7 +1059,8 @@ guess.
 		<a href="/photos/u-suke/page2/" class="Next">Next &gt;</a>
 	</div>
 	<div class="Results">(200 photos)</div>
-</div>				
+</div>	
+
 
 	
 
@@ -990,12 +1069,11 @@ guess.
 
 	<div id="Feeds">
 		<div id="AtomRSS">
-			<a href="http://api.flickr.com/services/feeds/photos_public.gne?id=50902562@N00&amp;format=rss_200" title="RSS 2.0 feed"><img src="/images/feed-icon-16x16.png" width="16" height="16" alt="Subscribe to a feed of stuff on this page..." class="absmiddle" /></a>
-			<a href="http://api.flickr.com/services/feeds/photos_public.gne?id=50902562@N00&amp;format=rss_200" title="RSS 2.0 feed">Feed</a> &ndash; Subscribe to Yusuke Kawasaki's photos 
+			<a href="http://api.flickr.com/services/feeds/photos_public.gne?id=50902562@N00&amp;format=rss_200" title="RSS 2.0 feed"><img src="http://l.yimg.com/www.flickr.com/images/feed-icon-16x16.png" width="16" height="16" alt="Subscribe to a feed of stuff on this page..." class="absmiddle" /></a>
+						<a href="http://api.flickr.com/services/feeds/photos_public.gne?id=50902562@N00&amp;format=rss_200" title="RSS 2.0 feed">Feed</a> &ndash; Subscribe to Yusuke Kawasaki's photos 
 		</div>
-		<div id="AddToYahoo"><a href="http://us.rd.yahoo.com/my/atm/Flickr/Users/*http://add.my.yahoo.com/rss?url=http%3A%2F%2Fapi.flickr.com%2Fservices%2Ffeeds%2Fphotos_public.gne%3Fid%3D50902562%40N00%26format%3Drss_200"><img src="/images/addtomyyahoo6.gif" width="62" height="17" alt="Add to My Yahoo!" /></a></div>
+		<div id="AddToYahoo"><a href="http://us.rd.yahoo.com/my/atm/Flickr/Users/*http://add.my.yahoo.com/rss?url=http%3A%2F%2Fapi.flickr.com%2Fservices%2Ffeeds%2Fphotos_public.gne%3Fid%3D50902562%40N00%26format%3Drss_200"><img src="http://l.yimg.com/www.flickr.com/images/addtomyyahoo6.gif" width="62" height="17" alt="Add to My Yahoo!" /></a></div>
 	</div>
-
 
 </div>
 
@@ -1019,7 +1097,7 @@ guess.
    onclick="window.open('http://del.icio.us/post?v=4&amp;partner=flickr&amp;noui&amp;jump=close&amp;url='+
    encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title),
    'delicious','toolbar=no,width=700,height=400'); return false;">
-						<img src="/images/add_to_delicious.gif" width="10" height="10" alt="Bookmark this page on deli.cio.us" />
+						<img src="http://l.yimg.com/www.flickr.com/images/add_to_delicious.gif" width="10" height="10" alt="Bookmark this page on deli.cio.us" />
 						&nbsp;Save to del.icio.us
 					</a>
 				</div>			
@@ -1029,7 +1107,7 @@ guess.
 				<br />
 			  
 				<a href="/explore/interesting/7days/">Last 7 Days</a> | 
-				<a href="/explore/interesting/2006/10/">This Month</a> | 
+				<a href="/explore/interesting/2007/04/">This Month</a> | 
 				<a href="/photos/tags/">Popular Tags</a> | 
 				<a href="/creativecommons/">Creative Commons</a> | 
 				<a href="/search/">Search</a>			  
@@ -1038,13 +1116,13 @@ guess.
 				<a href="/forums/">Forums</a> | 
 				<a href="/help/faq/">FAQ</a> | 
 					<a href="/sitemap.gne">Sitemap</a> | 
-				<a href="/help/website/#7">Help by Email</a>		
+				<a href="/help/contact/">Help by Email</a>		
 			</td>
 		</tr>
 	</table>
 	
 	<p class="About">
-		<a href="http://www.yahoo.com"><img src="/images/logo_yahoo_company.gif.v1.1" width="99" height="11" alt="Flickr, a Yahoo! Company" /></a>
+		<a href="http://www.yahoo.com"><img src="http://l.yimg.com/www.flickr.com/images/logo_yahoo_company.gif.v1.1.7" width="99" height="11" alt="Flickr, a Yahoo! Company" /></a>
 		<a href="http://blog.flickr.com/">Flickr Blog</a> | 
 		<a href="/about/">About Flickr</a> | 
 		<a href="/terms.gne" onClick="window.open('/terms.gne','TOC','status=yes,scrollbars=yes,resizable=yes,width=600,height=480'); return false">Terms of Use</a> | 
@@ -1052,7 +1130,7 @@ guess.
 		<a href="http://docs.yahoo.com/info/copyright/copyright.html" target="_blank">Copyright/IP Policy</a> |
 		<a href="/report_abuse.gne">Report Abuse</a>
 		<br />
-		Copyright &copy; 2006 Yahoo! Inc. All rights reserved.
+		Copyright &copy; 2007 Yahoo! Inc. All rights reserved.
   	</p>
 	
 
@@ -1070,8 +1148,10 @@ guess.
 
 
 
-<!-- page generated by www72 (in mud) at 22:05:26 10/31/06 in 886ms -->
+<!-- page generated by www1 (in mud) at 03:51:05 04/06/07 in 1297ms -->
 
+
+<script src="http://adserver.yahoo.com/a?f=792600013&p=flickr&l=FOOT9&c=r"></script>
 
 
 
